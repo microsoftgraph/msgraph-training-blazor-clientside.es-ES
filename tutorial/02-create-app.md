@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: 744df064e4fdc1bbf7821ae43a7b7878148902e9
-ms.sourcegitcommit: 5067c508675fbedbc7eead0869308d00b63be8e3
+ms.openlocfilehash: 4c021fe8aac9b42ee0984a15e73366ead847ee06
+ms.sourcegitcommit: ef990e983274cb161bfe16a8dff801d30a798f04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "49584682"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "53446980"
 ---
 <!-- markdownlint-disable MD002 MD041 -->
 
-Empiece por crear una aplicación de webassembler increíblemente brillante.
+Empiece por crear una aplicación Desmontaje web de Blazor.
 
-1. Abra la interfaz de línea de comandos (CLI) en un directorio donde desee crear el proyecto. Ejecute el comando siguiente.
+1. Abra la interfaz de línea de comandos (CLI) en un directorio donde desee crear el proyecto. Ejecuta el siguiente comando.
 
     ```Shell
     dotnet new blazorwasm --auth SingleOrg -o GraphTutorial
     ```
 
-    El `--auth SingleOrg` parámetro hace que el proyecto generado incluya la configuración para la autenticación con la plataforma de identidad de Microsoft.
+    El `--auth SingleOrg` parámetro hace que el proyecto generado incluya la configuración para la autenticación con el Plataforma de identidad de Microsoft.
 
 1. Una vez creado el proyecto, compruebe que funciona cambiando el directorio actual al directorio **GraphTutorial** y ejecutando el siguiente comando en la CLI.
 
@@ -24,55 +24,55 @@ Empiece por crear una aplicación de webassembler increíblemente brillante.
     dotnet watch run
     ```
 
-1. Abra el explorador y vaya a `https://localhost:5001` . Si todo funciona, debería ver un "Hola a todos". Mensaje.
+1. Abra el explorador y vaya a `https://localhost:5001` . Si todo funciona, debería ver un "¡Hola, mundo!" Mensaje.
 
 > [!IMPORTANT]
-> Si recibe una advertencia de que el certificado para **localhost** no es de confianza, puede usar .net Core CLI para instalar y confiar en el certificado de desarrollo. Consulte [forzar HTTPS en ASP.net Core](/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.1) para obtener instrucciones sobre sistemas operativos específicos.
+> Si recibe una advertencia de que el certificado de **localhost** no es de confianza, puede usar la CLI de .NET Core para instalar y confiar en el certificado de desarrollo. Consulta [Aplicar HTTPS en ASP.NET Core](/aspnet/core/security/enforcing-ssl) para obtener instrucciones para sistemas operativos específicos.
 
 ## <a name="add-nuget-packages"></a>Agregar paquetes NuGet
 
-Antes de continuar, instale algunos paquetes NuGet adicionales que usará más adelante.
+Antes de seguir, instala algunos paquetes NuGet que usarás más adelante.
 
-- [Microsoft. Graph](https://www.nuget.org/packages/Microsoft.Graph/) para realizar llamadas a Microsoft Graph.
-- [TimeZoneConverter](https://github.com/mj1856/TimeZoneConverter) para traducir los identificadores de zona horaria de Windows a identificadores de IANA.
+- [Microsoft.Graph](https://www.nuget.org/packages/Microsoft.Graph/) para realizar llamadas a Microsoft Graph.
+- [TimeZoneConverter](https://github.com/mj1856/TimeZoneConverter) para traducir Windows de zona horaria a identificadores de IANA.
 
-1. Ejecute los siguientes comandos en su CLI para instalar las dependencias.
+1. Ejecute los siguientes comandos en la CLI para instalar las dependencias.
 
     ```Shell
-    dotnet add package Microsoft.Graph --version 3.18.0
+    dotnet add package Microsoft.Graph --version 4.0.0
     dotnet add package TimeZoneConverter
     ```
 
 ## <a name="design-the-app"></a>Diseñar la aplicación
 
-En esta sección, creará la estructura básica de la interfaz de usuario de la aplicación.
+En esta sección, crearás la estructura básica de la interfaz de usuario de la aplicación.
 
-1. Quita las páginas de ejemplo generadas por la plantilla. Elimine los siguientes archivos.
+1. Quite las páginas de ejemplo generadas por la plantilla. Elimine los archivos siguientes.
 
     - **./Pages/Counter.razor**
     - **./Pages/FetchData.razor**
     - **./Shared/SurveyPrompt.razor**
-    - **./wwwroot/Sample-Data/weather.jsen**
+    - **./wwwroot/sample-data/weather.json**
 
-1. Abra **./wwwroot/index.html** y agregue el siguiente código justo **antes** de la `</body>` etiqueta de cierre.
+1. Abra **./wwwroot/index.html** y agregue el siguiente código justo **antes de la** etiqueta de `</body>` cierre.
 
     :::code language="html" source="../demo/GraphTutorial/wwwroot/index.html" id="BootStrapJSSnippet":::
 
-    Esto agrega los archivos JavaScript de [bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) .
+    Esto agrega los [archivos javascript de Bootstrap.](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
-1. Abra el **./wwwroot/CSS/app.CSS** y agregue el siguiente código.
+1. Abre **./wwwroot/css/app.css** y agrega el siguiente código.
 
     :::code language="css" source="../demo/GraphTutorial/wwwroot/css/app.css" id="CssSnippet":::
 
-1. Abra **./Shared/NavMenu.Razor** y reemplace su contenido por lo siguiente.
+1. Abra **./Shared/NavMenu.razor** y reemplace su contenido por lo siguiente.
 
     :::code language="razor" source="../demo/GraphTutorial/Shared/NavMenu.razor" id="NavMenuSnippet":::
 
-1. Abra **./pages/index.Razor** y reemplace su contenido por lo siguiente.
+1. Abra **./Pages/Index.razor** y reemplace su contenido por lo siguiente.
 
     :::code language="razor" source="../demo/GraphTutorial/Pages/Index.razor" id="IndexSnippet":::
 
-1. Abra **./Shared/LoginDisplay.Razor** y reemplace su contenido por lo siguiente.
+1. Abra **./Shared/LoginDisplay.razor** y reemplace su contenido por lo siguiente.
 
     ```razor
     @using Microsoft.AspNetCore.Components.Authorization
@@ -107,11 +107,11 @@ En esta sección, creará la estructura básica de la interfaz de usuario de la 
     }
     ```
 
-1. Cree un nuevo directorio en el directorio **./wwwroot** denominado **IMG**. Agregue un archivo de imagen de su elección con nombre **no-profile-photo.png** en este directorio. Esta imagen se utilizará como foto del usuario cuando el usuario no tenga foto en Microsoft Graph.
+1. Cree un nuevo directorio en **el directorio ./wwwroot** denominado **img**. Agregue un archivo de imagen de su elección denominado **no-profile-photo.png** en este directorio. Esta imagen se usará como foto del usuario cuando el usuario no tenga ninguna foto en Microsoft Graph.
 
     > [!TIP]
-    > Puede descargar la imagen usada en estas capturas de pantallas desde [GitHub](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png).
+    > Puede descargar la imagen usada en estas capturas de pantalla desde [GitHub](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png).
 
 1. Guarde todos los cambios y actualice la página.
 
-    ![Una captura de pantalla de la Página principal rediseñada](./images/create-app-01.png)
+    ![Una captura de pantalla de la página de inicio rediseñada](./images/create-app-01.png)
