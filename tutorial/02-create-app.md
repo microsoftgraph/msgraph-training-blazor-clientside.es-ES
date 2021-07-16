@@ -1,78 +1,78 @@
 ---
-ms.openlocfilehash: 744df064e4fdc1bbf7821ae43a7b7878148902e9
-ms.sourcegitcommit: 5067c508675fbedbc7eead0869308d00b63be8e3
+ms.openlocfilehash: 4c021fe8aac9b42ee0984a15e73366ead847ee06
+ms.sourcegitcommit: ef990e983274cb161bfe16a8dff801d30a798f04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "49584682"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "53446980"
 ---
 <!-- markdownlint-disable MD002 MD041 -->
 
-<span data-ttu-id="f22be-101">Empiece por crear una aplicación de webassembler increíblemente brillante.</span><span class="sxs-lookup"><span data-stu-id="f22be-101">Start by creating a Blazor WebAssembly app.</span></span>
+<span data-ttu-id="1a5cc-101">Empiece por crear una aplicación Desmontaje web de Blazor.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-101">Start by creating a Blazor WebAssembly app.</span></span>
 
-1. <span data-ttu-id="f22be-102">Abra la interfaz de línea de comandos (CLI) en un directorio donde desee crear el proyecto.</span><span class="sxs-lookup"><span data-stu-id="f22be-102">Open your command-line interface (CLI) in a directory where you want to create the project.</span></span> <span data-ttu-id="f22be-103">Ejecute el comando siguiente.</span><span class="sxs-lookup"><span data-stu-id="f22be-103">Run the following command.</span></span>
+1. <span data-ttu-id="1a5cc-102">Abra la interfaz de línea de comandos (CLI) en un directorio donde desee crear el proyecto.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-102">Open your command-line interface (CLI) in a directory where you want to create the project.</span></span> <span data-ttu-id="1a5cc-103">Ejecuta el siguiente comando.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-103">Run the following command.</span></span>
 
     ```Shell
     dotnet new blazorwasm --auth SingleOrg -o GraphTutorial
     ```
 
-    <span data-ttu-id="f22be-104">El `--auth SingleOrg` parámetro hace que el proyecto generado incluya la configuración para la autenticación con la plataforma de identidad de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="f22be-104">The `--auth SingleOrg` parameter causes the generated project to include configuration for authentication with the Microsoft identity platform.</span></span>
+    <span data-ttu-id="1a5cc-104">El `--auth SingleOrg` parámetro hace que el proyecto generado incluya la configuración para la autenticación con el Plataforma de identidad de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-104">The `--auth SingleOrg` parameter causes the generated project to include configuration for authentication with the Microsoft identity platform.</span></span>
 
-1. <span data-ttu-id="f22be-105">Una vez creado el proyecto, compruebe que funciona cambiando el directorio actual al directorio **GraphTutorial** y ejecutando el siguiente comando en la CLI.</span><span class="sxs-lookup"><span data-stu-id="f22be-105">Once the project is created, verify that it works by changing the current directory to the **GraphTutorial** directory and running the following command in your CLI.</span></span>
+1. <span data-ttu-id="1a5cc-105">Una vez creado el proyecto, compruebe que funciona cambiando el directorio actual al directorio **GraphTutorial** y ejecutando el siguiente comando en la CLI.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-105">Once the project is created, verify that it works by changing the current directory to the **GraphTutorial** directory and running the following command in your CLI.</span></span>
 
     ```Shell
     dotnet watch run
     ```
 
-1. <span data-ttu-id="f22be-106">Abra el explorador y vaya a `https://localhost:5001` .</span><span class="sxs-lookup"><span data-stu-id="f22be-106">Open your browser and browse to `https://localhost:5001`.</span></span> <span data-ttu-id="f22be-107">Si todo funciona, debería ver un "Hola a todos".</span><span class="sxs-lookup"><span data-stu-id="f22be-107">If everything is working, you should see a "Hello, world!"</span></span> <span data-ttu-id="f22be-108">Mensaje.</span><span class="sxs-lookup"><span data-stu-id="f22be-108">message.</span></span>
+1. <span data-ttu-id="1a5cc-106">Abra el explorador y vaya a `https://localhost:5001` .</span><span class="sxs-lookup"><span data-stu-id="1a5cc-106">Open your browser and browse to `https://localhost:5001`.</span></span> <span data-ttu-id="1a5cc-107">Si todo funciona, debería ver un "¡Hola, mundo!"</span><span class="sxs-lookup"><span data-stu-id="1a5cc-107">If everything is working, you should see a "Hello, world!"</span></span> <span data-ttu-id="1a5cc-108">Mensaje.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-108">message.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="f22be-109">Si recibe una advertencia de que el certificado para **localhost** no es de confianza, puede usar .net Core CLI para instalar y confiar en el certificado de desarrollo.</span><span class="sxs-lookup"><span data-stu-id="f22be-109">If you receive a warning that the certificate for **localhost** is un-trusted you can use the .NET Core CLI to install and trust the development certificate.</span></span> <span data-ttu-id="f22be-110">Consulte [forzar HTTPS en ASP.net Core](/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.1) para obtener instrucciones sobre sistemas operativos específicos.</span><span class="sxs-lookup"><span data-stu-id="f22be-110">See [Enforce HTTPS in ASP.NET Core](/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.1) for instructions for specific operating systems.</span></span>
+> <span data-ttu-id="1a5cc-109">Si recibe una advertencia de que el certificado de **localhost** no es de confianza, puede usar la CLI de .NET Core para instalar y confiar en el certificado de desarrollo.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-109">If you receive a warning that the certificate for **localhost** is un-trusted you can use the .NET Core CLI to install and trust the development certificate.</span></span> <span data-ttu-id="1a5cc-110">Consulta [Aplicar HTTPS en ASP.NET Core](/aspnet/core/security/enforcing-ssl) para obtener instrucciones para sistemas operativos específicos.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-110">See [Enforce HTTPS in ASP.NET Core](/aspnet/core/security/enforcing-ssl) for instructions for specific operating systems.</span></span>
 
-## <a name="add-nuget-packages"></a><span data-ttu-id="f22be-111">Agregar paquetes NuGet</span><span class="sxs-lookup"><span data-stu-id="f22be-111">Add NuGet packages</span></span>
+## <a name="add-nuget-packages"></a><span data-ttu-id="1a5cc-111">Agregar paquetes NuGet</span><span class="sxs-lookup"><span data-stu-id="1a5cc-111">Add NuGet packages</span></span>
 
-<span data-ttu-id="f22be-112">Antes de continuar, instale algunos paquetes NuGet adicionales que usará más adelante.</span><span class="sxs-lookup"><span data-stu-id="f22be-112">Before moving on, install some additional NuGet packages that you will use later.</span></span>
+<span data-ttu-id="1a5cc-112">Antes de seguir, instala algunos paquetes NuGet que usarás más adelante.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-112">Before moving on, install some additional NuGet packages that you will use later.</span></span>
 
-- <span data-ttu-id="f22be-113">[Microsoft. Graph](https://www.nuget.org/packages/Microsoft.Graph/) para realizar llamadas a Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="f22be-113">[Microsoft.Graph](https://www.nuget.org/packages/Microsoft.Graph/) for making calls to Microsoft Graph.</span></span>
-- <span data-ttu-id="f22be-114">[TimeZoneConverter](https://github.com/mj1856/TimeZoneConverter) para traducir los identificadores de zona horaria de Windows a identificadores de IANA.</span><span class="sxs-lookup"><span data-stu-id="f22be-114">[TimeZoneConverter](https://github.com/mj1856/TimeZoneConverter) for translating Windows time zone identifiers to IANA identifiers.</span></span>
+- <span data-ttu-id="1a5cc-113">[Microsoft.Graph](https://www.nuget.org/packages/Microsoft.Graph/) para realizar llamadas a Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-113">[Microsoft.Graph](https://www.nuget.org/packages/Microsoft.Graph/) for making calls to Microsoft Graph.</span></span>
+- <span data-ttu-id="1a5cc-114">[TimeZoneConverter](https://github.com/mj1856/TimeZoneConverter) para traducir Windows de zona horaria a identificadores de IANA.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-114">[TimeZoneConverter](https://github.com/mj1856/TimeZoneConverter) for translating Windows time zone identifiers to IANA identifiers.</span></span>
 
-1. <span data-ttu-id="f22be-115">Ejecute los siguientes comandos en su CLI para instalar las dependencias.</span><span class="sxs-lookup"><span data-stu-id="f22be-115">Run the following commands in your CLI to install the dependencies.</span></span>
+1. <span data-ttu-id="1a5cc-115">Ejecute los siguientes comandos en la CLI para instalar las dependencias.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-115">Run the following commands in your CLI to install the dependencies.</span></span>
 
     ```Shell
-    dotnet add package Microsoft.Graph --version 3.18.0
+    dotnet add package Microsoft.Graph --version 4.0.0
     dotnet add package TimeZoneConverter
     ```
 
-## <a name="design-the-app"></a><span data-ttu-id="f22be-116">Diseñar la aplicación</span><span class="sxs-lookup"><span data-stu-id="f22be-116">Design the app</span></span>
+## <a name="design-the-app"></a><span data-ttu-id="1a5cc-116">Diseñar la aplicación</span><span class="sxs-lookup"><span data-stu-id="1a5cc-116">Design the app</span></span>
 
-<span data-ttu-id="f22be-117">En esta sección, creará la estructura básica de la interfaz de usuario de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="f22be-117">In this section you will create the basic UI structure of the application.</span></span>
+<span data-ttu-id="1a5cc-117">En esta sección, crearás la estructura básica de la interfaz de usuario de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-117">In this section you will create the basic UI structure of the application.</span></span>
 
-1. <span data-ttu-id="f22be-118">Quita las páginas de ejemplo generadas por la plantilla.</span><span class="sxs-lookup"><span data-stu-id="f22be-118">Remove sample pages generated by the template.</span></span> <span data-ttu-id="f22be-119">Elimine los siguientes archivos.</span><span class="sxs-lookup"><span data-stu-id="f22be-119">Delete the following files.</span></span>
+1. <span data-ttu-id="1a5cc-118">Quite las páginas de ejemplo generadas por la plantilla.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-118">Remove sample pages generated by the template.</span></span> <span data-ttu-id="1a5cc-119">Elimine los archivos siguientes.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-119">Delete the following files.</span></span>
 
-    - <span data-ttu-id="f22be-120">**./Pages/Counter.razor**</span><span class="sxs-lookup"><span data-stu-id="f22be-120">**./Pages/Counter.razor**</span></span>
-    - <span data-ttu-id="f22be-121">**./Pages/FetchData.razor**</span><span class="sxs-lookup"><span data-stu-id="f22be-121">**./Pages/FetchData.razor**</span></span>
-    - <span data-ttu-id="f22be-122">**./Shared/SurveyPrompt.razor**</span><span class="sxs-lookup"><span data-stu-id="f22be-122">**./Shared/SurveyPrompt.razor**</span></span>
-    - <span data-ttu-id="f22be-123">**./wwwroot/Sample-Data/weather.jsen**</span><span class="sxs-lookup"><span data-stu-id="f22be-123">**./wwwroot/sample-data/weather.json**</span></span>
+    - <span data-ttu-id="1a5cc-120">**./Pages/Counter.razor**</span><span class="sxs-lookup"><span data-stu-id="1a5cc-120">**./Pages/Counter.razor**</span></span>
+    - <span data-ttu-id="1a5cc-121">**./Pages/FetchData.razor**</span><span class="sxs-lookup"><span data-stu-id="1a5cc-121">**./Pages/FetchData.razor**</span></span>
+    - <span data-ttu-id="1a5cc-122">**./Shared/SurveyPrompt.razor**</span><span class="sxs-lookup"><span data-stu-id="1a5cc-122">**./Shared/SurveyPrompt.razor**</span></span>
+    - <span data-ttu-id="1a5cc-123">**./wwwroot/sample-data/weather.json**</span><span class="sxs-lookup"><span data-stu-id="1a5cc-123">**./wwwroot/sample-data/weather.json**</span></span>
 
-1. <span data-ttu-id="f22be-124">Abra **./wwwroot/index.html** y agregue el siguiente código justo **antes** de la `</body>` etiqueta de cierre.</span><span class="sxs-lookup"><span data-stu-id="f22be-124">Open **./wwwroot/index.html** and add the following code just **before** the closing `</body>` tag.</span></span>
+1. <span data-ttu-id="1a5cc-124">Abra **./wwwroot/index.html** y agregue el siguiente código justo **antes de la** etiqueta de `</body>` cierre.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-124">Open **./wwwroot/index.html** and add the following code just **before** the closing `</body>` tag.</span></span>
 
     :::code language="html" source="../demo/GraphTutorial/wwwroot/index.html" id="BootStrapJSSnippet":::
 
-    <span data-ttu-id="f22be-125">Esto agrega los archivos JavaScript de [bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) .</span><span class="sxs-lookup"><span data-stu-id="f22be-125">This adds the [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) javascript files.</span></span>
+    <span data-ttu-id="1a5cc-125">Esto agrega los [archivos javascript de Bootstrap.](https://getbootstrap.com/docs/4.5/getting-started/introduction/)</span><span class="sxs-lookup"><span data-stu-id="1a5cc-125">This adds the [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) javascript files.</span></span>
 
-1. <span data-ttu-id="f22be-126">Abra el **./wwwroot/CSS/app.CSS** y agregue el siguiente código.</span><span class="sxs-lookup"><span data-stu-id="f22be-126">Open **./wwwroot/css/app.css** and add the following code.</span></span>
+1. <span data-ttu-id="1a5cc-126">Abre **./wwwroot/css/app.css** y agrega el siguiente código.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-126">Open **./wwwroot/css/app.css** and add the following code.</span></span>
 
     :::code language="css" source="../demo/GraphTutorial/wwwroot/css/app.css" id="CssSnippet":::
 
-1. <span data-ttu-id="f22be-127">Abra **./Shared/NavMenu.Razor** y reemplace su contenido por lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="f22be-127">Open **./Shared/NavMenu.razor** and replace its contents with the following.</span></span>
+1. <span data-ttu-id="1a5cc-127">Abra **./Shared/NavMenu.razor** y reemplace su contenido por lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-127">Open **./Shared/NavMenu.razor** and replace its contents with the following.</span></span>
 
     :::code language="razor" source="../demo/GraphTutorial/Shared/NavMenu.razor" id="NavMenuSnippet":::
 
-1. <span data-ttu-id="f22be-128">Abra **./pages/index.Razor** y reemplace su contenido por lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="f22be-128">Open **./Pages/Index.razor** and replace its contents with the following.</span></span>
+1. <span data-ttu-id="1a5cc-128">Abra **./Pages/Index.razor** y reemplace su contenido por lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-128">Open **./Pages/Index.razor** and replace its contents with the following.</span></span>
 
     :::code language="razor" source="../demo/GraphTutorial/Pages/Index.razor" id="IndexSnippet":::
 
-1. <span data-ttu-id="f22be-129">Abra **./Shared/LoginDisplay.Razor** y reemplace su contenido por lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="f22be-129">Open **./Shared/LoginDisplay.razor** and replace its contents with the following.</span></span>
+1. <span data-ttu-id="1a5cc-129">Abra **./Shared/LoginDisplay.razor** y reemplace su contenido por lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-129">Open **./Shared/LoginDisplay.razor** and replace its contents with the following.</span></span>
 
     ```razor
     @using Microsoft.AspNetCore.Components.Authorization
@@ -107,11 +107,11 @@ ms.locfileid: "49584682"
     }
     ```
 
-1. <span data-ttu-id="f22be-130">Cree un nuevo directorio en el directorio **./wwwroot** denominado **IMG**.</span><span class="sxs-lookup"><span data-stu-id="f22be-130">Create a new directory in the **./wwwroot** directory named **img**.</span></span> <span data-ttu-id="f22be-131">Agregue un archivo de imagen de su elección con nombre **no-profile-photo.png** en este directorio.</span><span class="sxs-lookup"><span data-stu-id="f22be-131">Add an image file of your choosing named **no-profile-photo.png** in this directory.</span></span> <span data-ttu-id="f22be-132">Esta imagen se utilizará como foto del usuario cuando el usuario no tenga foto en Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="f22be-132">This image will be used as the user's photo when the user has no photo in Microsoft Graph.</span></span>
+1. <span data-ttu-id="1a5cc-130">Cree un nuevo directorio en **el directorio ./wwwroot** denominado **img**.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-130">Create a new directory in the **./wwwroot** directory named **img**.</span></span> <span data-ttu-id="1a5cc-131">Agregue un archivo de imagen de su elección denominado **no-profile-photo.png** en este directorio.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-131">Add an image file of your choosing named **no-profile-photo.png** in this directory.</span></span> <span data-ttu-id="1a5cc-132">Esta imagen se usará como foto del usuario cuando el usuario no tenga ninguna foto en Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-132">This image will be used as the user's photo when the user has no photo in Microsoft Graph.</span></span>
 
     > [!TIP]
-    > <span data-ttu-id="f22be-133">Puede descargar la imagen usada en estas capturas de pantallas desde [GitHub](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png).</span><span class="sxs-lookup"><span data-stu-id="f22be-133">You can download the image used in these screenshots from [GitHub](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png).</span></span>
+    > <span data-ttu-id="1a5cc-133">Puede descargar la imagen usada en estas capturas de pantalla desde [GitHub](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png).</span><span class="sxs-lookup"><span data-stu-id="1a5cc-133">You can download the image used in these screenshots from [GitHub](https://github.com/microsoftgraph/msgraph-training-blazor-clientside/blob/master/demo/GraphTutorial/wwwroot/img/no-profile-photo.png).</span></span>
 
-1. <span data-ttu-id="f22be-134">Guarde todos los cambios y actualice la página.</span><span class="sxs-lookup"><span data-stu-id="f22be-134">Save all of your changes and refresh the page.</span></span>
+1. <span data-ttu-id="1a5cc-134">Guarde todos los cambios y actualice la página.</span><span class="sxs-lookup"><span data-stu-id="1a5cc-134">Save all of your changes and refresh the page.</span></span>
 
-    ![Una captura de pantalla de la Página principal rediseñada](./images/create-app-01.png)
+    ![Una captura de pantalla de la página de inicio rediseñada](./images/create-app-01.png)
